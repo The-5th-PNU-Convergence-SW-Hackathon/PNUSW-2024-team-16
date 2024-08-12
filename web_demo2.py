@@ -14,22 +14,17 @@ from dashboard import dashboard
 from visualize import visualize
 from simulation import simulation
 from life_cycle import life_cycle
-from portfolio import portfolio
-
-
-openai.api_key = st.secrets["secrets"]['OPENAI_API_KEY']
-
 
 def show_financial_advisor():
 
     #st.title("DGB IM Calendar")
-    st.markdown("<h1 style='text-align: center; color: skyblue'>🗓️ Future Calendar 🗓️</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: skyblue'>🗓️ DGB IM Calendar 🗓️</h1>", unsafe_allow_html=True)
     
     st.sidebar.write("설문조사에 기반한 상품 추천 목록입니다")
     st.sidebar.image("https://github.com/JinukHong/shadowFunk/assets/45095330/05b20da2-93c0-422c-a731-965b3b6c806a", use_column_width=True)
     st.sidebar.image("https://github.com/JinukHong/shadowFunk/assets/45095330/c12f207a-0e76-48e8-84b8-afeccb50258c", use_column_width=True)
 
-    tab1, tab2, tab3, tab4, tab5, tab6  = st.tabs(["사용자 프로필 설정", "데이터 수집 및 분석", "통합 대시보드", "미래 금융 예측", "시뮬레이션 기능", "포트폴리오 추천"])
+    tab1, tab2, tab3,tab4, tab5  = st.tabs(["사용자 프로필 설정", "데이터 수집 및 분석", "통합 대시보드", "미래 금융 예측", "시뮬레이션 기능"])
 
     if 'adjusted_income' not in st.session_state:
         st.session_state.adjusted_income = 0
@@ -91,8 +86,7 @@ def show_financial_advisor():
             #     st.altair_chart(chart, use_container_width=True)
 
 
-    with tab6:
-        portfolio()
+    
     
     # with tab6:
     #     st.header("AI Secretary Chatbot")

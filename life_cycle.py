@@ -97,6 +97,3 @@ def life_cycle():
     st.plotly_chart(fig, use_container_width=True)
 
 
-
-
-life_cycle()

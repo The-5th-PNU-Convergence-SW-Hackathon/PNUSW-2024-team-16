@@ -58,7 +58,7 @@ def dashboard():
     data, spent_by_month = load_data()
 
     # Visualization Function
-    def visualize(data):
+    def visualize_dashboard(data):
         data = data.reset_index()
         df = data.copy()
         if st.checkbox('원본 데이터 확인'):
@@ -102,7 +102,7 @@ def dashboard():
     # Streamlit UI Layout and Interaction
 
     if page == "Visualization":
-        visualize(data)
+        visualize_dashboard(data)
     elif page == "Data Exploration":
         data_exploration(data)
     elif page == "Prediction":
