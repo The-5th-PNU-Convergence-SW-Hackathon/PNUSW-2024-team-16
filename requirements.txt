@@ -1,0 +1,17 @@
+streamlit
+openai
+requests
+streamlit_chat
+pandas
+numpy
+matplotlib
+altair
+streamlit_calendar
+openpyxl
+statsmodels
+streamlit_autorefresh
+streamlit_extras
+scikit-learn
+xlrd
+streamlit_js_eval
+plotly
