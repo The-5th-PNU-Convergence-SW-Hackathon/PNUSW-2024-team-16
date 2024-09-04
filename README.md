@@ -92,10 +92,6 @@ Future Calendar와 같은 기능을 통해 예상 수익과 지출 패턴을 명
 
 
 
-
-
-
-
 ### 3. 개발결과
 #### 3.1. 전체시스템 흐름도
 
@@ -104,6 +100,7 @@ Future Calendar와 같은 기능을 통해 예상 수익과 지출 패턴을 명
 
 #### 3.2. 기능설명
    ① 사전 설문조사 (마이데이터 동의 후 SKIP 가능)
+
    <img src="./src/survey1.png" width="300px" title="Title" alt="system design"></img>
     <img src="./src/survey2.png" width="300px" title="Title" alt="system design"></img>
 
@@ -114,23 +111,37 @@ Future Calendar와 같은 기능을 통해 예상 수익과 지출 패턴을 명
   <img src="./src/main1.png" width="300px" title="Title" alt="system design"></img>
 
 
-   ③ 시뮬레이션
+   ③ 챌린지
+
+  <img src="./src/challenge1.png" width="300px" title="Title" alt="system design"></img>
+  <img src="./src/challenge2.png" width="300px" title="Title" alt="system design"></img>
+  <img src="./src/challenge3.png" width="300px" title="Title" alt="system design"></img>
+
+
+
+   ④ 시뮬레이션
 
   <img src="./src/simul1.png" width="300px" title="Title" alt="system design"></img>
 
    
-   ④ 마이페이지
+   ⑤ 마이페이지
 
    <img src="./src/mypage1.png" width="300px" title="Title" alt="system design"></img>
 
 
-   ⑤ AI 챗봇
+   ⑥ AI 챗봇
 
    <img src="./src/chat1.png" width="300px" title="Title" alt="system design"></img>
 
 
 #### 3.3. 기능명세서
-[기능명세서](./src/기능명세서.pdf)
+[기능명세서](./src/기능명세서 살펴보기(Web version).pdf)
+
+   <img src="./src/des1.png" width="300px" title="Title" alt="system design"></img>
+   <img src="./src/des2.png" width="300px" title="Title" alt="system design"></img>
+   <img src="./src/des3.png" width="300px" title="Title" alt="system design"></img>
+
+
 
 #### 3.4. 디렉토리 구조
     ├── __pycache__/
@@ -174,8 +185,7 @@ Future Calendar와 같은 기능을 통해 예상 수익과 지출 패턴을 명
 > streamlit run main_app.py
 
 ### 5. 소개 및 시연 영상
-> 프로젝트에 대한 소개와 시연 영상을 넣으세요.
-> 프로젝트 소개 동영상을 교육원 메일(swedu@pusan.ac.kr)로 제출 이후 센터에서 부여받은 youtube URL주소를 넣으세요.
+[![MiZi 팀 시연영상 - Future Calender](https://img.youtube.com/vi/AvIVxmz37ZY/0.jpg)](https://www.youtube.com/watch?v=AvIVxmz37ZY)
 
 ### 6. 팀 소개
 본 팀은 교내 금융학회에서 만나, 금융과 IT 분야에 대한 공통된 관심사를 바탕으로 각자의 전문성을 살려 팀을 결성하게 되었다. 최종적인 목표는 금융선진국이 되기 위한 시민의 금융지식 함양과 관심도
