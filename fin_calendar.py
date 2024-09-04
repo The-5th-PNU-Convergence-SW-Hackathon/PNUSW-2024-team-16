@@ -63,23 +63,37 @@ def dispaly_calendar():
 
 
     def load_data():
-        data = pd.read_excel("통합 문서1.xlsx")
-        
-        data['지출일'] = pd.to_datetime(data['지출일'], format='%Y.%m.%d')
-        original_start_date = data['지출일'].min()
-        original_end_date = data['지출일'].max()
-        new_end_date = pd.to_datetime("2024-08-06")
-        date_difference = new_end_date - original_end_date
+        try:
+            # Check if the file exists and is accessible
+            if not os.path.exists("통합 문서1.xlsx"):
+                st.error("The file '통합 문서1.xlsx' does not exist.")
+                return None, None
+            
+            # Attempt to read the file
+            data = pd.read_excel("통합 문서1.xlsx")
+            
+            data['지출일'] = pd.to_datetime(data['지출일'], format='%Y.%m.%d')
+            original_start_date = data['지출일'].min()
+            original_end_date = data['지출일'].max()
+            new_end_date = pd.to_datetime("2024-08-06")
+            date_difference = new_end_date - original_end_date
 
-        data['지출일'] = data['지출일'] + date_difference
+            data['지출일'] = data['지출일'] + date_difference
 
-        data['지출금액'] = pd.to_numeric(data['지출금액'], errors='coerce')
-        data['지출금액'] = data['지출금액'].fillna(method='ffill')
-        data['지출금액'] = data['지출금액'].astype(int)
-        
-        daily_expenditure = data.groupby('지출일')['지출금액'].sum().reset_index()
-        print(daily_expenditure.info())
-        return data, daily_expenditure
+            data['지출금액'] = pd.to_numeric(data['지출금액'], errors='coerce')
+            data['지출금액'] = data['지출금액'].fillna(method='ffill')
+            data['지출금액'] = data['지출금액'].astype(int)
+            
+            daily_expenditure = data.groupby('지출일')['지출금액'].sum().reset_index()
+            
+            # Remove the print statement that could be causing issues
+            # print(daily_expenditure.info())
+            
+            return data, daily_expenditure
+    
+        except OSError as e:
+            st.error(f"An error occurred while reading the file: {e}")
+            return None, None
 
     def create_events(daily_expenditure, salaries):
         # Current date
