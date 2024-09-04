@@ -135,12 +135,9 @@ Future Calendar와 같은 기능을 통해 예상 수익과 지출 패턴을 명
 
 
 #### 3.3. 기능명세서
-[기능명세서 살펴보기(Web Version)](./src/기능명세서.pdf)
+[웹페이지 살펴보기](./src/기능명세서.pdf)
 
-   <img src="./src/des1.png" width="300px" title="Title" alt="system design"></img>
-   <img src="./src/des2.png" width="300px" title="Title" alt="system design"></img>
-   <img src="./src/des3.png" width="300px" title="Title" alt="system design"></img>
-
+   <img src="./src/functions.png" width="600px" title="Title" alt="system design"></img>
 
 
 #### 3.4. 디렉토리 구조
